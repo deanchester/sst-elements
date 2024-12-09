@@ -54,6 +54,8 @@ libmerlin_la_SOURCES = \
 	topology/polarfly.h \
 	topology/polarstar.cc \
 	topology/polarstar.h \
+	topology/json.cc \
+	topology/json.h \
 	hr_router/hr_router.h \
 	hr_router/hr_router.cc \
 	hr_router/xbar_arb_age.h \
@@ -91,7 +93,8 @@ libmerlin_la_SOURCES = \
 	topology/pymerlin-topo-polarstar.py \
 	topology/pymerlin-topo-hyperx.py \
 	topology/pymerlin-topo-fattree.py \
-	topology/pymerlin-topo-mesh.py
+	topology/pymerlin-topo-mesh.py \
+	topology/pymerlin-topo-json.py 	
 
 EXTRA_DIST = \
 	tests/testsuite_default_merlin.py \
@@ -143,7 +146,8 @@ BUILT_SOURCES = \
 	topology/pymerlin-topo-polarstar.inc \
 	topology/pymerlin-topo-hyperx.inc \
 	topology/pymerlin-topo-fattree.inc \
-	topology/pymerlin-topo-mesh.inc
+	topology/pymerlin-topo-mesh.inc \
+	topology/pymerlin-topo-json.inc \
 
 install-exec-hook:
 	$(SST_REGISTER_TOOL) SST_ELEMENT_SOURCE     merlin=$(abs_srcdir)
